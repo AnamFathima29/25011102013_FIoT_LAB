@@ -1,0 +1,40 @@
+# Keil generated listing folders
+**/Listings/
+
+# Keil generated object files
+**/Objects/
+**/*.obj
+**/*.lst
+**/*.m51
+**/*.abs
+**/*.omf
+**/*.lnp
+**/*.crf
+
+# Keil user-specific settings
+**/*.uvgui
+**/*.uvgui.*
+**/*.uvguix*
+**/*.uvopt
+**/*.uvoptx
+
+# Generated intermediate build files
+**/*.o
+**/*.d
+**/*.dep
+**/*.axf
+**/*.map
+**/*.elf
+
+# Generated build directories
+**/Debug/
+**/Release/
+
+# Keil generated reports
+**/*.build_log.htm
+**/*.htm
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
