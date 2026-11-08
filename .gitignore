@@ -1,17 +1,19 @@
-# Keil generated listing folders
+
+# Keil generated listing files
 **/Listings/
 
-# Keil generated object files
-**/Objects/
-**/*.obj
-**/*.lst
-**/*.m51
-**/*.abs
-**/*.omf
-**/*.lnp
-**/*.crf
+# Keil generated object and build files
+**/Objects/*.obj
+**/Objects/*.lst
+**/Objects/*.m51
+**/Objects/*.abs
+**/Objects/*.omf
+**/Objects/*.lnp
+**/Objects/*.build_log.htm
+**/Objects/*.crf
+**/Objects/*.dep
 
-# Keil user-specific settings
+# User-specific Keil settings
 **/*.uvgui
 **/*.uvgui.*
 **/*.uvguix*
@@ -19,10 +21,10 @@
 **/*.uvoptx
 
 # Generated intermediate build files
+**/*.axf
 **/*.o
 **/*.d
 **/*.dep
-**/*.axf
 **/*.map
 **/*.elf
 
@@ -30,11 +32,9 @@
 **/Debug/
 **/Release/
 
-# Keil generated reports
-**/*.build_log.htm
-**/*.htm
-
 # Operating system files
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Keep .hex firmware files tracked
