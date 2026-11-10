@@ -1,101 +1,39 @@
-#include <reg51.h>
+#include <reg52.h>
 
-sbit led = P1^7;
+sbit LED = P1^7;                 /* change pin to match your board */
 
-unsigned char pwm_counter = 0;
-unsigned char duty = 0;
-
-
-/*====================================================
-              TIMER 0 INTERRUPT
-====================================================*/
+unsigned int ms_count = 0;
 
 void Timer0_ISR(void) interrupt 1
 {
-    /* Reload Timer 0 */
+    /* reload for next 1 ms */
+    TR0 = 0;
+    TH0 = 0xFC;
+    TL0 = 0x66;
+    TR0 = 1;
 
-    TH0 = 0xFF;
-    TL0 = 0xED;
-
-    /* Software PWM */
-
-    pwm_counter++;
-
-    if(pwm_counter >= 50)
+    ms_count++;
+    if (ms_count >= 1000)        /* 1000 x 1 ms = 1 s */
     {
-        pwm_counter = 0;
-    }
-
-    /* Active-HIGH LED */
-
-    if(pwm_counter < duty)
-    {
-        led = 1;       // LED ON
-    }
-    else
-    {
-        led = 0;       // LED OFF
+        ms_count = 0;
+        LED = ~LED;              /* toggle LED */
     }
 }
 
-
-/*====================================================
-                    MAIN
-====================================================*/
-
 void main(void)
 {
-    unsigned int i;
+    LED = 0;
 
-    /* LED initially OFF */
+    TMOD = (TMOD & 0xF0) | 0x01; /* Timer0, Mode 1 (16-bit) */
+    TH0  = 0xFC;
+    TL0  = 0x66;
 
-    led = 0;
+    ET0 = 1;                     /* enable Timer0 interrupt */
+    EA  = 1;                     /* global interrupt enable */
+    TR0 = 1;                     /* start Timer0            */
 
-    /* Timer 0, Mode 1 */
-
-    TMOD = 0x01;
-
-    /* Timer reload value */
-
-    TH0 = 0xFF;
-    TL0 = 0xED;
-
-    /* Enable Timer 0 interrupt */
-
-    ET0 = 1;
-
-    /* Enable global interrupt */
-
-    EA = 1;
-
-    /* Start Timer 0 */
-
-    TR0 = 1;
-
-
-    while(1)
+    while (1)
     {
-        /*--------------------------------------------
-          Increase brightness: 0% ? 100%
-        --------------------------------------------*/
-
-        for(duty = 0; duty <= 50; duty++)
-        {
-            for(i = 0; i < 300; i++)
-            {
-            }
-        }
-
-
-        /*--------------------------------------------
-          Decrease brightness: 100% ? 0%
-        --------------------------------------------*/
-
-        for(duty = 50; duty > 0; duty--)
-        {
-            for(i = 0; i < 300; i++)
-            {
-            }
-        }
+        /* CPU is free. Timing is done 100% by hardware timer. */
     }
 }
