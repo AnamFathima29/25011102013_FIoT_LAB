@@ -37,7 +37,7 @@ The experiment establishes serial communication between the STM32 Blue Pill deve
 
 USART2 is used for communication between the STM32 and the PC terminal. The corresponding UART pins are PA2 (USART2_TX) and PA3 (USART2_RX), connected through a suitable USB-to-UART interface.
 
-![alt text](image.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

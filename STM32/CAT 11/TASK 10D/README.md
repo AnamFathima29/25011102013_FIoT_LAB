@@ -28,7 +28,7 @@ The experiment uses an STM32 microcontroller connected to a Wemos D1 Mini (ESP82
 - **HTTP Method:** GET
 - **Power Supply:** Appropriate 3.3 V supply for ESP8266, with common GND
 
-![alt text](image.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

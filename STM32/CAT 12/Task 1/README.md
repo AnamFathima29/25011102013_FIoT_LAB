@@ -27,7 +27,7 @@ The experiment uses the STM32F401RE Nucleo development board to verify GPIO outp
 - **Programming Environment:** STM32CubeMX and Keil MDK
 - **Library:** STM32 HAL Library
 
-![alt text](image.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

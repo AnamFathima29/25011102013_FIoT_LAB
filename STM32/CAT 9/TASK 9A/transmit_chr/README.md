@@ -32,7 +32,7 @@ The experiment demonstrates serial communication between the STM32 microcontroll
 - **Parity:** None
 - **Flow Control:** None
 
-![alt text](image.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

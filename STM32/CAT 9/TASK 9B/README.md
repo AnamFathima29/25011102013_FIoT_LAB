@@ -28,7 +28,7 @@ The experiment uses UART communication between the STM32 microcontroller and a P
 - **UART Connection:** USART1 TX and RX connected to the corresponding USB-to-TTL converter RX and TX pins.
 - **Ground:** Common GND between the STM32 board and USB-to-TTL converter.
 
-![alt text](image.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

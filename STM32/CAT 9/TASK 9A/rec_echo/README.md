@@ -32,7 +32,7 @@ The experiment demonstrates UART serial communication between the STM32 microcon
 - **Parity:** None
 - **Flow Control:** None
 
-![alt text](image.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 
