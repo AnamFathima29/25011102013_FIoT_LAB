@@ -27,7 +27,7 @@ The experiment uses the STM32F401RE Nucleo development board to verify GPIO outp
 - **Programming Environment:** STM32CubeMX and Keil MDK
 - **Library:** STM32 HAL Library
 
-**Circuit Diagram:** The on-board LED is connected to GPIO pin PA5. No external LED or additional wiring is required.
+![alt text](image.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

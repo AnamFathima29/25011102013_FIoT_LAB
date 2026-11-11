@@ -34,7 +34,7 @@ The experiment uses an STM32 microcontroller connected to a BME280 environmental
 - **MQTT Topic:** `stm32/Anam/data`
 - **Power Supply:** 3.3 V supply for BME280 and appropriate power supply for ESP8266, with common GND.
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+![alt text](image.png)
 
 **BME280 Connections:**
 

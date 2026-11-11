@@ -27,7 +27,7 @@ The experiment uses an STM32 microcontroller connected to a Wemos D1 Mini (ESP82
 - **TCP Server Port:** 80
 - **Power Supply:** Appropriate 3.3 V supply for ESP8266, with common GND
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+![alt text](image.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

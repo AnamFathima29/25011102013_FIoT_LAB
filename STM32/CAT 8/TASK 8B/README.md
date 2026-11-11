@@ -29,7 +29,7 @@ The experiment uses a push-button connected to the STM32 GPIO input pin and the 
 - Connect the other terminal of the push-button to GND.
 - The onboard LED is controlled through PC13.
 
-![Task 8B Circuit Diagram](circuit.png)
+![alt text](image.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

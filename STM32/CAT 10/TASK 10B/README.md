@@ -38,7 +38,7 @@ The experiment establishes UART communication between the STM32 microcontroller 
 
 The STM32 UART2 is connected to the PC through a suitable USB-to-TTL interface for displaying the communication output.
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+![alt text](image.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

@@ -32,7 +32,7 @@ The experiment demonstrates serial communication between the STM32 microcontroll
 - **Parity:** None
 - **Flow Control:** None
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+![alt text](image.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 
