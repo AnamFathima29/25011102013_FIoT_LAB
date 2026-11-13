@@ -283,25 +283,3 @@ Node-RED processes both data sources and uses programmed environmental rules to 
 
 The system demonstrates the integration of embedded sensing, I²C, UART-based ESP8266 communication, MQTT, API-based weather retrieval, Node-RED processing and dashboard visualization.
 
-## 9. LIMITATIONS AND FUTURE IMPROVEMENTS
-
-- Add a soil-moisture sensor to make watering advice depend on actual soil conditions.
-- Add a light sensor to measure light intensity instead of estimating sunlight from cloud cover.
-- Verify and refine plant temperature, humidity and watering ranges using reliable horticultural references.
-- Store API credentials securely rather than exposing them in a shared flow export.
-- Use a unique MQTT topic and appropriate broker security for deployment.
-- Add more plants and allow plant requirements to be configured through the dashboard.
-
-## 10. SETUP NOTES
-
-1. Configure the BME280 and ESP8266 connections in STM32CubeMX and verify the pin assignments against the actual circuit.
-2. Build and flash the STM32 firmware using Keil.
-3. Configure the ESP8266 library with the Wi-Fi and MQTT broker settings.
-4. Configure the Node-RED MQTT input node to subscribe to the same topic published by the STM32.
-5. Configure the OpenWeather node with a valid API credential.
-6. Import the Node-RED flow and deploy it.
-7. Open the dashboard and confirm that both indoor sensor and outdoor weather data are being received.
-
----
-
-**Security note:** Do not publish a real OpenWeather API key, Wi-Fi password or MQTT credential in the README or a public Node-RED flow export. Store credentials using Node-RED's credential/configuration features or environment variables.
