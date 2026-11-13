@@ -32,7 +32,7 @@ The experiment uses the AT89S52 microcontroller to control an LED connected to P
 
 **Circuit Diagram:**
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/131285ec-ca3b-4d48-8fd0-da6d3538cdcd" />
+![alt text](circuit.png)
 
 
 ### 2. Core Logic / Pseudocode / Code Base

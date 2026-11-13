@@ -35,7 +35,7 @@ The experiment uses UART serial communication between the AT89S52 microcontrolle
 
 **Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/a232e34e-0888-4215-9b21-2cdcafc4efe8" />
+![alt text](circuit.png)
 
 
 ### 2. Core Logic / Pseudocode / Code Base

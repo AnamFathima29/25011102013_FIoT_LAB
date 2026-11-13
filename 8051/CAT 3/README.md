@@ -31,7 +31,7 @@ The experiment uses four LEDs connected to Port 1 and a push-button connected to
 
 **Circuit Diagram:**
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/0943e5ba-a614-4b2d-80ba-a126e29119de" />
+![alt text](circuit.png)
 
 
 ---

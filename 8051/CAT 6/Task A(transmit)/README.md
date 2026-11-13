@@ -35,9 +35,9 @@ The experiment uses the UART communication interface of the AT89S52 microcontrol
 
 The USB-to-TTL converter must use compatible 5 V TTL logic levels. Do not connect its 5 V supply pin to the board unless the board's power requirements and supply arrangement have been verified.
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+**Circuit Diagram:** 
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/72bbffdf-6770-4643-a544-fd5ab89fc54f" />
+![alt text](circuit.png)
 
 
 ### 2. Core Logic / Pseudocode / Code Base
