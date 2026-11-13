@@ -55,7 +55,6 @@ The system is designed to help decide whether selected plants should be kept ind
 | BME280 SCL | PB6 | I²C1 SCL (configured/intended) | I²C clock |
 | BME280 SDA | PB7 | I²C1 SDA (configured/intended) | I²C data |
 | ESP8266 / Wemos | USART1 pins as configured in CubeMX | UART1 | Communication between STM32 and ESP8266 |
-| PC / serial terminal | USART2 pins as configured in CubeMX | UART2 | Debug output / serial communication |
 
 **Note:** Confirm the exact UART TX/RX pin numbers, power connections and ground connections from the final circuit and CubeMX pinout. They are not specified in the material supplied for this README.
 
