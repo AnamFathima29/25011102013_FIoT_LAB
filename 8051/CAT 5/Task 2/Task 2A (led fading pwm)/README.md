@@ -33,6 +33,7 @@ The experiment uses the AT89S52 microcontroller to control the brightness of an 
 
 ![AT89S52 Software PWM LED Circuit](circuit.png)
 
+
 ### 2. Core Logic / Pseudocode / Code Base
 
 **Working Principle:**

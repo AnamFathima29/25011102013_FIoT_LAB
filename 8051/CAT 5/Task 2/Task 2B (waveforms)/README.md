@@ -33,7 +33,7 @@ The two push buttons are connected between their respective GPIO pins and GND. T
 
 **Circuit Diagram:**
 
-![AT89S52 Variable Frequency Waveform Generator Circuit](circuit.png)
+![alt text](circuit.png)
 
 ### 2. Core Logic / Pseudocode / Code Base
 
