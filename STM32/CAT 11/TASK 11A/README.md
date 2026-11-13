@@ -1,6 +1,6 @@
 # EXPERIMENT DETAILS
 
-**EXP:** CONTINUOUS LAB EVALUATION – 10
+**EXP:** CONTINUOUS LAB EVALUATION – 11
 
 **DATE:** 12/10/2026
 
@@ -10,7 +10,7 @@
 
 ---
 
-## TASK 10C – Configure ESP8266 as a TCP Server
+## TASK 11A – Configure ESP8266 as a TCP Server
 
 ### 1. Circuit Diagram
 

@@ -1,6 +1,6 @@
 # EXPERIMENT DETAILS
 
-**EXP:** CONTINUOUS LAB EVALUATION 12
+**EXP:** CONTINUOUS LAB EVALUATION 13
 
 **DATE:** 23/10/2026 
 
@@ -10,7 +10,7 @@
 
 ---
 
-## TASK 12 – BME280 Sensor Interfacing Using I²C
+## TASK 13 – BME280 Sensor Interfacing Using I²C
 
 ### 1. Circuit Diagram
 

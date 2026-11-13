@@ -1,6 +1,6 @@
 # EXPERIMENT DETAILS
 
-**EXP:** CONTINUOUS LAB EVALUATION – 10
+**EXP:** CONTINUOUS LAB EVALUATION – 11
 
 **DATE:** 12/10/2026
 
@@ -10,7 +10,7 @@
 
 ---
 
-## TASK 10D – Observe the HTTP Request and Send an HTTP Response
+## TASK 11B – Observe the HTTP Request and Send an HTTP Response
 
 ### 1. Circuit Diagram
 

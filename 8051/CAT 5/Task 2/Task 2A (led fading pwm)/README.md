@@ -1,6 +1,6 @@
 # EXPERIMENT DETAILS
 
-**EXP:** CONTINUOUS LAB EVALUATION – TIMER-BASED LED CONTROL
+**EXP:** CONTINUOUS LAB EVALUATION 5 – TIMER-BASED LED CONTROL
 
 **DATE:** 10/08/2026
 
@@ -31,7 +31,7 @@ The experiment uses the AT89S52 microcontroller to control the brightness of an 
 
 **Circuit Diagram:**
 
-![AT89S52 Software PWM LED Circuit](circuit.png)
+![alt text](circuit.png)
 
 
 ### 2. Core Logic / Pseudocode / Code Base

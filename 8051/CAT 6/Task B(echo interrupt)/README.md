@@ -33,7 +33,7 @@ The experiment uses UART serial communication between the AT89S52 microcontrolle
 | RXD (P3.0) | TXD |
 | GND | GND |
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+**Circuit Diagram:** 
 
 ![alt text](circuit.png)
 
