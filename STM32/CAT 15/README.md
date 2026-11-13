@@ -56,8 +56,6 @@ The system is designed to help decide whether selected plants should be kept ind
 | BME280 SDA | PB7 | I²C1 SDA (configured/intended) | I²C data |
 | ESP8266 / Wemos | USART1 pins as configured in CubeMX | UART1 | Communication between STM32 and ESP8266 |
 
-**Note:** Confirm the exact UART TX/RX pin numbers, power connections and ground connections from the final circuit and CubeMX pinout. They are not specified in the material supplied for this README.
-
 ## 2. SOFTWARE AND TOOLS
 
 - STM32CubeMX – peripheral and clock configuration.
@@ -87,7 +85,6 @@ The STM32 publishes a JSON message containing the sensor measurements. The examp
 
 ```json
 {
-  "status": "success",
   "temperature": 28.45,
   "humidity": 62.30,
   "pressure": 1008.72
@@ -272,7 +269,6 @@ The exact clock configuration values are not included in the material supplied f
 | AHB / APB prescalers | Confirm from STM32CubeMX |
 | I²C1 | BME280 communication |
 | USART1 | ESP8266 communication |
-| USART2 | Serial/debug communication |
 
 ## 8. INFERENCE
 
