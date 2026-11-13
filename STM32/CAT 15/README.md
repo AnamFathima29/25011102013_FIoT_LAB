@@ -1,6 +1,17 @@
-**# Plant Placer – Smart Indoor/Outdoor Plant Placement Advisor**
+# EXPERIMENT DETAILS
 
-**## PROJECT DETAILS**
+**EXP:** CONTINUOUS LAB EVALUATION – 15
+
+**DATE:** 27/10/2026
+
+**NAME OF EXP:** BME280 Sensor Interfacing Using I²C and MQTT for Node-RED Analytics
+
+**HARDWARE SETUP / PLATFORM:** CubeMX + Keil MDK + STM32 Nucleo Development Board + Debugger + BME280 Sensor + ESP8266 Wi-Fi Module
+
+---
+# Plant Placer – Smart Indoor/Outdoor Plant Placement Advisor
+
+## PROJECT DETAILS
 
 | Item | Description |
 |---|---|
@@ -13,7 +24,7 @@
 | Data Processing and Dashboard | Node-RED |
 | Outdoor Weather Data | OpenWeather API |
 
-**## AIM**
+## AIM
 
 To develop an STM32-based environmental monitoring system that reads temperature, humidity and atmospheric pressure from a BME280 sensor using the I²C protocol. The measured indoor environmental data is transmitted through an ESP8266 module using MQTT.
 
@@ -21,9 +32,9 @@ Node-RED receives the indoor sensor data and obtains outdoor weather information
 
 The system is designed to help decide whether selected plants should be kept indoors or moved outdoors based on the available environmental information.
 
-**## 1. HARDWARE SETUP**
+## 1. HARDWARE SETUP
 
-**### Hardware Components**
+### Hardware Components
 
 | Component | Purpose |
 |---|---|
@@ -33,11 +44,11 @@ The system is designed to help decide whether selected plants should be kept ind
 | Connecting wires | Connect the sensor and communication module to the STM32 board |
 | USB connection | Programming and serial debugging of the STM32 board |
 
-**### Circuit Diagram**
+### Circuit Diagram
 
 > Add your final, verified wiring diagram here if you have one. The pin table below records the connections known from the project setup; verify the ESP8266 UART pins against your STM32CubeMX configuration before publishing.
 
-**### Pin Configuration**
+### Pin Configuration
 
 | Module | STM32 connection | Interface | Purpose |
 |---|---|---|---|
@@ -48,7 +59,7 @@ The system is designed to help decide whether selected plants should be kept ind
 
 **Note:** Confirm the exact UART TX/RX pin numbers, power connections and ground connections from the final circuit and CubeMX pinout. They are not specified in the material supplied for this README.
 
-**## 2. SOFTWARE AND TOOLS**
+## 2. SOFTWARE AND TOOLS
 
 - STM32CubeMX – peripheral and clock configuration.
 - Keil MDK – STM32 firmware development and compilation.
@@ -59,7 +70,7 @@ The system is designed to help decide whether selected plants should be kept ind
 - OpenWeather API – provides outdoor weather information.
 - Node-RED Dashboard (`ui-template`) – displays plant recommendations and environmental information.
 
-**## 3. SYSTEM WORKFLOW**
+## 3. SYSTEM WORKFLOW
 
 1. The BME280 measures indoor temperature, relative humidity and atmospheric pressure.
 2. The STM32 communicates with the BME280 through I²C.
@@ -71,7 +82,7 @@ The system is designed to help decide whether selected plants should be kept ind
 8. The Plant Brain function compares the indoor and outdoor conditions, calculates plant-fit scores and generates placement and watering recommendations.
 9. The dashboard displays the results. The pot-size and view controls send their selected settings back to the flow.
 
-**### MQTT Data Format**
+### MQTT Data Format
 
 The STM32 publishes a JSON message containing the sensor measurements. The example format specified for the project is:
 
@@ -92,15 +103,13 @@ stm32/Anam/data
 
 The MQTT broker and topic must match the configuration used by the STM32 ESP8266 library and the Node-RED MQTT-in node.
 
-**## 4. NODE-RED FLOW AND IMPLEMENTATION**
+## 4. NODE-RED FLOW AND IMPLEMENTATION
 
-**### Node-RED Flow**
+### Node-RED Flow
 
-![Node-RED Flow Diagram](assets/node-red-flow.png)
+![Node-RED flow](assets/node-red-flow.png)
 
-*Figure 1: Node-RED flow showing MQTT indoor sensor input, outdoor weather retrieval, Plant Brain processing and dashboard integration.*
-
-**### Main Nodes and Their Functions**
+### Main Nodes and Their Functions
 
 | Node / Function | Description |
 |---|---|
@@ -116,7 +125,7 @@ The MQTT broker and topic must match the configuration used by the STM32 ESP8266
 | `pot and view settings` | Processes the selected pot size and plant-list view from the dashboard |
 | Test Inject nodes | Provide test indoor conditions for checking the flow |
 
-**### Indoor Sensor Processing**
+### Indoor Sensor Processing
 
 The `save indoor sensor` function:
 - Accepts the MQTT payload and parses it if it arrives as a string.
@@ -127,7 +136,7 @@ The `save indoor sensor` function:
 
 The Plant Brain considers indoor sensor data stale if it is more than **2 minutes** old.
 
-**### Outdoor Weather Processing**
+### Outdoor Weather Processing
 
 The `save outdoor weather` function extracts and stores:
 - Temperature and feels-like temperature.
@@ -138,7 +147,7 @@ The `save outdoor weather` function extracts and stores:
 
 The weather request is triggered by the Inject node at a 10-minute interval. The Plant Brain considers outdoor weather data stale if it is more than **1 hour** old.
 
-**### Pot and View Settings**
+### Pot and View Settings
 
 The dashboard sends settings in the form `pot:<size>` or `view:<mode>`.
 
@@ -154,15 +163,15 @@ Supported view modes:
 
 These view options filter the displayed list; they do not replace the placement calculation.
 
-**## 5. CORE LOGIC – PLANT PLACEMENT**
+## 5. CORE LOGIC – PLANT PLACEMENT
 
-**### A. Indoor and Outdoor Comparison**
+### A. Indoor and Outdoor Comparison
 
 The Plant Brain reads the latest indoor sensor values and outdoor weather values from Node-RED flow context. It calculates overall comfort scores for indoor and outdoor conditions using temperature, humidity, VPD and selected weather penalties.
 
 The scores are displayed as a comparison to help understand the current environmental conditions. They are heuristic scores generated by the program, not measurements from a separate plant-health sensor.
 
-**### B. Vapour Pressure Deficit (VPD)**
+### B. Vapour Pressure Deficit (VPD)
 
 VPD (Vapour Pressure Deficit) is used as an indicator of how strongly the surrounding air can draw moisture from plant leaves.
 
@@ -185,7 +194,7 @@ The program labels VPD values as:
 
 VPD is an environmental estimate. It does not directly measure soil moisture or the actual water content of a plant.
 
-**### C. Plant Database and Fit Score**
+### C. Plant Database and Fit Score
 
 The program contains a predefined list of 12 plants, each with:
 - A preferred indoor or outdoor location.
@@ -203,7 +212,7 @@ The difference between the outdoor and indoor fit scores determines the recommen
 - Indoor fit is at least 8 points higher – recommend keeping the plant indoors.
 - Difference is less than 8 points – either location is considered suitable; the plant's predefined home location is used for the associated watering advice.
 
-**### D. Weather and Pressure-Based Checks**
+### D. Weather and Pressure-Based Checks
 
 The system also considers:
 - Rainfall and weather condition from OpenWeather.
@@ -214,7 +223,7 @@ The system also considers:
 
 Pressure samples are collected over time. Once at least 15 minutes of data is available, the program estimates the pressure change per hour. A sufficiently falling pressure trend is treated as a possible indication that rain may be approaching. This is a simple heuristic, not a guaranteed rain forecast.
 
-**### E. Watering Guidance**
+### E. Watering Guidance
 
 The program estimates watering amount and interval using:
 - Selected pot size.
@@ -227,17 +236,16 @@ Outdoor watering advice is also modified when rain is detected or when the press
 
 **Important:** Watering amounts and intervals are estimates based on programmed rules. The project does not currently use a soil-moisture sensor, so the recommendation cannot confirm whether the soil is actually dry or wet.
 
-**## 6. DASHBOARD**
+## 6. DASHBOARD
 
-**### Plant Placer Dashboard**
+### Plant Placer Dashboard
 
-![Plant Placer Dashboard](assets/plant-placer-dashboard.png)
-
-*Figure 2: Plant Placer dashboard displaying indoor/outdoor comfort scores, VPD values, plant-placement recommendations and environmental comparison.*
-
+![Plant Placer dashboard](assets/plant-placer-dashboard.png)
+![alt text](image.png)
+![alt text](image-1.png)
 The dashboard provides a visual comparison of indoor and outdoor environmental conditions and displays plant-placement recommendations.
 
-**### Dashboard Features**
+### Dashboard Features
 
 1. **Today's Placement** – displays an overall verdict such as a mixed indoor/outdoor recommendation.
 2. **Indoor and Outdoor Comfort Scores** – shows the calculated environmental scores for both locations.
@@ -250,7 +258,7 @@ The dashboard provides a visual comparison of indoor and outdoor environmental c
 9. **Weather and Warning Cards** – displays information such as humidity/mold watch, heat warning, rain/pressure trend and window advice.
 10. **Sunlight Estimate** – displays an estimate derived from OpenWeather cloud-cover information. It is not a direct measurement from a light sensor.
 
-**## 7. CLOCK CONFIGURATION**
+## 7. CLOCK CONFIGURATION
 
 The exact clock configuration values are not included in the material supplied for this README. Add the values from the final STM32CubeMX clock configuration if your report requires a clock table.
 
@@ -263,7 +271,7 @@ The exact clock configuration values are not included in the material supplied f
 | USART1 | ESP8266 communication |
 | USART2 | Serial/debug communication |
 
-**## 8. INFERENCE**
+## 8. INFERENCE
 
 The project integrates STM32-based indoor environmental sensing with outdoor weather information through MQTT and Node-RED. The BME280 provides indoor temperature, humidity and pressure readings, while OpenWeather supplies outdoor weather data.
 
@@ -271,7 +279,7 @@ Node-RED processes both data sources and uses programmed environmental rules to 
 
 The system demonstrates the integration of embedded sensing, I²C, UART-based ESP8266 communication, MQTT, API-based weather retrieval, Node-RED processing and dashboard visualization.
 
-**## 9. LIMITATIONS AND FUTURE IMPROVEMENTS**
+## 9. LIMITATIONS AND FUTURE IMPROVEMENTS
 
 - Add a soil-moisture sensor to make watering advice depend on actual soil conditions.
 - Add a light sensor to measure light intensity instead of estimating sunlight from cloud cover.
@@ -280,7 +288,7 @@ The system demonstrates the integration of embedded sensing, I²C, UART-based ES
 - Use a unique MQTT topic and appropriate broker security for deployment.
 - Add more plants and allow plant requirements to be configured through the dashboard.
 
-**## 10. SETUP NOTES**
+## 10. SETUP NOTES
 
 1. Configure the BME280 and ESP8266 connections in STM32CubeMX and verify the pin assignments against the actual circuit.
 2. Build and flash the STM32 firmware using Keil.
