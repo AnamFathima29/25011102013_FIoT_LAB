@@ -27,9 +27,9 @@ The experiment uses a 16×2 HD44780-compatible LCD connected to the AT89S52 micr
 - **Power Supply:** +5 V and GND
 - **Contrast Pin (V0):** Connected to the middle terminal of a potentiometer for contrast adjustment
 
-**Circuit Diagram:** Save the hardware connection diagram in this experiment folder as `circuit.png`.
+**Circuit Diagram:** 
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/ad8fe1f3-5d45-41ba-b940-891d7cb07002" />
+![alt text](circuit.png)
 
 
 ### 2. Core Logic / Pseudocode / Code Base

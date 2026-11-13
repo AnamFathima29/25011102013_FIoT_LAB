@@ -1,6 +1,6 @@
 # EXPERIMENT DETAILS
 
-**EXP:** CAT-11 – Continuous Lab Evaluation-12
+**EXP:** CAT-12 – Continuous Lab Evaluation-12
 
 **DATE:** 14/10/2026 
 

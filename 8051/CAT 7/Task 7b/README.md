@@ -29,7 +29,7 @@ The experiment uses a 16×2 HD44780-compatible LCD connected to the AT89S52 micr
 
 **Circuit Diagram:** 
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/12e4c907-7e84-462e-a959-dee921740110" />
+![alt text](circuit.png)
 
 
 ### 2. Core Logic / Pseudocode / Code Base

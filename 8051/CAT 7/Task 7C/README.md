@@ -32,7 +32,7 @@ The experiment uses a 4×4 matrix keypad and a 16×2 HD44780-compatible LCD inte
 
 **Circuit Diagram:** 
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/42b1a500-f270-4dec-ac0e-b423d1ac43d0" />
+![alt text](circuit.png)
 
 
 
