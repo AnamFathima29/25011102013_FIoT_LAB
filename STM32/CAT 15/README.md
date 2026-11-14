@@ -46,7 +46,7 @@ The system is designed to help decide whether selected plants should be kept ind
 
 ### Circuit Diagram
 
-> Add your final, verified wiring diagram here if you have one. The pin table below records the connections known from the project setup; verify the ESP8266 UART pins against your STM32CubeMX configuration before publishing.
+![alt text](circuit.png)
 
 ### Pin Configuration
 
