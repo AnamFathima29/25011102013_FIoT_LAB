@@ -103,7 +103,7 @@ The MQTT broker and topic must match the configuration used by the STM32 ESP8266
 
 ### Node-RED Flow
 
-<img width="500" height="300" alt="node-red" src="https://github.com/user-attachments/assets/22ee51ec-ac14-4069-9828-dd9b7aa9d921" />
+![alt text](node-red.png)
 
 
 ### Main Nodes and Their Functions
@@ -237,11 +237,11 @@ Outdoor watering advice is also modified when rain is detected or when the press
 
 ### Plant Placer Dashboard
 
-<img width="500" height="300" alt="dashboard-1" src="https://github.com/user-attachments/assets/82261396-05e3-423e-9d3e-8056a849e4b4" />
+![alt text](dashboard-1.png)
 
-<img width="500" height="300" alt="dashboard-2" src="https://github.com/user-attachments/assets/ef9fde94-7e6a-4d7c-b8e0-382c346ad464" />
+![alt text](dashboard-2.png)
 
-<img width="500" height="300" alt="dashboard-3" src="https://github.com/user-attachments/assets/0e94c4da-90d2-4c46-864d-810e8ee40aac" />
+![alt text](dashboard-3.png)
 
 The dashboard provides a visual comparison of indoor and outdoor environmental conditions and displays plant-placement recommendations.
 

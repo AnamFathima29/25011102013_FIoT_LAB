@@ -39,6 +39,7 @@ The implementation uses the built-in components of the STM32 NUCLEO-F401RE devel
 - The on-board LED provides visual output.
 
 ![alt text](<circuit.png>)
+
 ### 2. CORE LOGIC / IMPLEMENTATION
 
 1. Initialize the HAL library and configure the system clock.

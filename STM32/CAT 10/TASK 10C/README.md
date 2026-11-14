@@ -10,7 +10,7 @@
 
 ---
 
-## TASK 10B – ESP8266 AT Command Interface and Wi-Fi Configuration
+## TASK 10C – ESP8266 AT Command Interface and Wi-Fi Configuration
 
 ### 1. Circuit Diagram
 
