@@ -35,7 +35,7 @@ The experiment demonstrates interfacing the BME280 environmental sensor with the
 | SCL               | I2C1 SCL         | Serial Clock Line        |
 | SDO               | GND              | Selects I²C address 0x76 |
 
-![alt text](<circuit.png>)
+![alt text](circuit.png)
 
 **Working Configuration:**
 
